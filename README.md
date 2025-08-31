@@ -1,3 +1,5 @@
+everything below is just the info that next.js slaps on, but this is a draft for my portfolio website :D ! I wanted to do something simple but deviates the traditional portfolio format I see everywhere, so I decided to make it look more like a sketchbook tour in a warm n cozy cafe. Thanks for checking it out!
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
