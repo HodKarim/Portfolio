@@ -1,0 +1,104 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+body, html {
+  background-image: url('/wowo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  cursor: url('/pencil.png'), auto;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.flip-book {
+  position: relative;
+  transition: left 1s ease; /* sync with flippingTime */
+}
+
+/* Front cover closed */
+.flip-book.front-closed {
+  transform-origin: left center;
+  left: -235px; /* shift left by half page */
+}
+
+/* Open (middle pages) */
+.flip-book.opened {
+  transform-origin: center center;
+  left: 0; /* centered on spine */
+}
+
+/* Back cover closed */
+.flip-book.back-closed {
+  transform-origin: right center;
+  left: 235px; /* shift right by half page */
+}
+
+/* Other supporting styles */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon-logo {
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 20px;
+  filter: drop-shadow(2px 2px 4px rgba(19, 14, 12, 0.3));
+}
+
+.page-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.book-page {
+  background: #ece2e2;
+  color: #000;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  
+}
+
+.cover {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  font-weight: bold;
+}
